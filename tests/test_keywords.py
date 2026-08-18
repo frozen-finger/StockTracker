@@ -1,4 +1,4 @@
-from stocktracker.keywords import classify_text, evidence_snippets
+from stocktracker.keywords import CNINFO_SEARCH_TERMS, NEWS_SEARCH_TERMS, classify_text, evidence_snippets
 
 
 def test_classifies_multiple_events() -> None:
@@ -15,3 +15,7 @@ def test_evidence_is_bounded() -> None:
     assert "第一大股东发生变更" in snippets[0]
     assert len(snippets[0]) < 80
 
+
+def test_shareholder_proposal_is_queried_by_official_and_news_sources() -> None:
+    assert "股东提案" in CNINFO_SEARCH_TERMS
+    assert any("股东提案" in term for term in NEWS_SEARCH_TERMS)

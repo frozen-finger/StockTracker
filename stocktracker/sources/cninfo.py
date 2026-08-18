@@ -19,7 +19,9 @@ CHINA_TZ = ZoneInfo("Asia/Shanghai")
 class CninfoCollector:
     name = "cninfo"
 
-    def __init__(self, http: HttpClient, page_size: int = 30, max_pages: int = 20) -> None:
+    def __init__(self, http: HttpClient, page_size: int = 30, max_pages: int | None = None) -> None:
+        if max_pages is not None and max_pages < 1:
+            raise ValueError("max_pages must be positive or None")
         self.http = http
         self.page_size = page_size
         self.max_pages = max_pages
@@ -67,7 +69,8 @@ class CninfoCollector:
         return list(documents.values())
 
     def _query(self, term: str, column: str, start: date, end: date):
-        for page in range(1, self.max_pages + 1):
+        page = 1
+        while True:
             data = {
                 "pageNum": str(page),
                 "pageSize": str(self.page_size),
@@ -99,6 +102,15 @@ class CninfoCollector:
             yield from announcements
             if not payload.get("hasMore") or not announcements:
                 break
+            if self.max_pages is not None and page >= self.max_pages:
+                message = (
+                    f"query term={term!r} column={column} truncated after {self.max_pages} pages "
+                    "while CNInfo still reported hasMore=true"
+                )
+                self.warnings.append(message)
+                LOG.warning(message)
+                break
+            page += 1
 
     def _from_item(self, item: dict) -> Document:
         title = (item.get("announcementTitle") or "").replace("<em>", "").replace("</em>", "")

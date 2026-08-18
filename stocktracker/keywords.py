@@ -49,6 +49,7 @@ CNINFO_SEARCH_TERMS = (
     "董事候选人",
     "临时股东大会",
     "临时股东会",
+    "股东提案",
     "临时提案",
     "第一大股东",
     "控股股东变更",
@@ -59,6 +60,7 @@ CNINFO_TERM_EVENTS = {
     "董事候选人": "director_nomination",
     "临时股东大会": "extraordinary_general_meeting",
     "临时股东会": "extraordinary_general_meeting",
+    "股东提案": "shareholder_proposal",
     "临时提案": "shareholder_proposal",
     "第一大股东": "largest_shareholder_change",
     "控股股东变更": "largest_shareholder_change",
@@ -69,6 +71,7 @@ NEWS_SEARCH_TERMS = (
     "上市公司 未来12个月 增持",
     "上市公司 提名 董事候选人",
     "上市公司 临时股东大会",
+    "上市公司 股东提案",
     "上市公司 股东 临时提案",
     "上市公司 第一大股东 变更",
 )
