@@ -28,9 +28,17 @@ def main() -> int:
     end = args.end_date or datetime.now(ZoneInfo("Asia/Shanghai")).date()
     start = end - timedelta(days=args.days - 1)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    http = HttpClient(timeout=args.timeout)
-    cninfo = FallbackAwareCninfoCollector(http)
-    collectors = [cninfo, ExchangeFallbackCollector(http, cninfo), BingNewsCollector(http)]
+
+    # CNInfo is the preferred aggregation source, but fail fast so a CNInfo outage
+    # cannot consume most of the workflow timeout before official-exchange fallback runs.
+    cninfo_http = HttpClient(timeout=min(args.timeout, 8), retries=1)
+    fallback_http = HttpClient(timeout=args.timeout)
+    cninfo = FallbackAwareCninfoCollector(cninfo_http)
+    collectors = [
+        cninfo,
+        ExchangeFallbackCollector(fallback_http, cninfo),
+        BingNewsCollector(fallback_http),
+    ]
     report = run_pipeline(collectors, start, end)
     latest, snapshot = write_report(report, args.output_dir)
     logging.info("Wrote %s and %s (%s documents, status=%s)", latest, snapshot, report["stats"]["document_count"], report["status"])
