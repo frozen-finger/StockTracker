@@ -31,6 +31,23 @@ class BrokenCollector:
         raise RuntimeError("source unavailable")
 
 
+class WarningCollector:
+    name = "primary"
+    warnings = ["temporary query failure"]
+
+    def collect(self, start: date, end: date):
+        return []
+
+
+class RecoveryCollector:
+    name = "fallback"
+    warnings: list[str] = []
+    resolved_warnings = {"primary": {"temporary query failure"}}
+
+    def collect(self, start: date, end: date):
+        return []
+
+
 def test_partial_report_and_write(tmp_path) -> None:
     report = run_pipeline([GoodCollector(), BrokenCollector()], date(2026, 8, 10), date(2026, 8, 17))
     assert report["status"] == "partial"
@@ -46,3 +63,9 @@ def test_failed_when_every_source_is_unavailable() -> None:
     report = run_pipeline([BrokenCollector()], date(2026, 8, 10), date(2026, 8, 17))
     assert report["status"] == "failed"
     assert report["documents"] == []
+
+
+def test_recovered_warning_does_not_force_partial_status() -> None:
+    report = run_pipeline([WarningCollector(), RecoveryCollector()], date(2026, 8, 10), date(2026, 8, 17))
+    assert report["status"] == "complete"
+    assert report["warnings"] == []
