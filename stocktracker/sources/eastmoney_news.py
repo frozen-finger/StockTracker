@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 from stocktracker.http import HttpClient
-from stocktracker.keywords import NEWS_SEARCH_TERMS, classify_text, evidence_snippets
+from stocktracker.keywords import NEWS_SEARCH_TERMS, classify_news_text, evidence_snippets
 from stocktracker.models import Document
 
 LOG = logging.getLogger(__name__)
@@ -100,7 +100,7 @@ class EastmoneyNewsCollector:
         content = _clean_html(item.get("content"))
         url = str(item.get("url") or "").strip()
         published_at = _parse_datetime(item.get("date"))
-        events, keywords = classify_text(f"{title}\n{content}")
+        events, keywords = classify_news_text(f"{title}\n{content}")
         identity_seed = url or f"{title}|{published_at.isoformat()}"
         identity = hashlib.sha256(identity_seed.encode("utf-8")).hexdigest()[:24]
         return Document(
