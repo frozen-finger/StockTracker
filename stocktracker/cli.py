@@ -11,6 +11,7 @@ from stocktracker.pipeline import run_pipeline, write_report
 from stocktracker.sources.bing_news import BingNewsCollector
 from stocktracker.sources.eastmoney_news import EastmoneyNewsCollector
 from stocktracker.sources.exchanges import ExchangeFallbackCollector, FallbackAwareCninfoCollector
+from stocktracker.sources.sina_news import SinaFinanceNewsCollector
 
 
 def parse_args() -> argparse.Namespace:
@@ -42,6 +43,7 @@ def main() -> int:
         ExchangeFallbackCollector(fallback_http, cninfo),
         BingNewsCollector(fallback_http),
         EastmoneyNewsCollector(fallback_http),
+        SinaFinanceNewsCollector(fallback_http),
     ]
     report = run_pipeline(collectors, start, end)
     latest, snapshot = write_report(report, args.output_dir)
