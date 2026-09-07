@@ -10,11 +10,13 @@ on:
       - "stocktracker/sources/bing_news.py"
       - "stocktracker/sources/eastmoney_news.py"
       - "stocktracker/sources/sina_news.py"
+      - "stocktracker/sources/news_seeds.py"
       - "stocktracker/keywords.py"
       - "stocktracker/cli.py"
       - "tests/test_bing_news.py"
       - "tests/test_eastmoney_news.py"
       - "tests/test_sina_news.py"
+      - "tests/test_news_seeds.py"
       - "tests/test_keywords.py"
       - ".github/workflows/weekly-collect.yml"
   workflow_dispatch:
