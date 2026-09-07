@@ -10,7 +10,7 @@ from stocktracker.http import HttpClient
 from stocktracker.pipeline import run_pipeline, write_report
 from stocktracker.sources.bing_news import BingNewsCollector
 from stocktracker.sources.eastmoney_news import EastmoneyNewsCollector
-from stocktracker.sources.exchanges import ExchangeFallbackCollector, FallbackAwareCninfoCollector
+from stocktracker.sources.news_seeds import SeededCninfoCollector, SeededExchangeFallbackCollector
 from stocktracker.sources.sina_news import SinaFinanceNewsCollector
 
 
@@ -37,12 +37,14 @@ def main() -> int:
     # Recovery/news sources should also fail reasonably quickly so one upstream
     # endpoint cannot stall the weekly workflow.
     fallback_http = HttpClient(timeout=min(args.timeout, 10), retries=2)
-    cninfo = FallbackAwareCninfoCollector(cninfo_http)
+    cninfo = SeededCninfoCollector(cninfo_http)
+    exchange_fallback = SeededExchangeFallbackCollector(fallback_http, cninfo)
+    official_seed_providers = [cninfo, exchange_fallback]
     collectors = [
         cninfo,
-        ExchangeFallbackCollector(fallback_http, cninfo),
+        exchange_fallback,
         BingNewsCollector(fallback_http),
-        EastmoneyNewsCollector(fallback_http),
+        EastmoneyNewsCollector(fallback_http, seed_providers=official_seed_providers, seed_limit=30),
         SinaFinanceNewsCollector(fallback_http),
     ]
     report = run_pipeline(collectors, start, end)
