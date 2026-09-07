@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 from stocktracker.http import HttpClient
-from stocktracker.keywords import NEWS_SEARCH_TERMS, classify_text, evidence_snippets
+from stocktracker.keywords import NEWS_SEARCH_TERMS, classify_news_text, evidence_snippets
 from stocktracker.models import Document
 
 LOG = logging.getLogger(__name__)
@@ -61,7 +61,7 @@ class BingNewsCollector:
                 published_at = published_at.replace(tzinfo=CHINA_TZ)
         except (TypeError, ValueError):
             published_at = datetime.combine(date.today(), time.min, CHINA_TZ)
-        events, keywords = classify_text(f"{title}\n{description}")
+        events, keywords = classify_news_text(f"{title}\n{description}")
         identity = hashlib.sha256(url.encode("utf-8")).hexdigest()[:24]
         return Document(
             id=f"news:{identity}",
