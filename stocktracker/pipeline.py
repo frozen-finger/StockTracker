@@ -42,6 +42,17 @@ def run_pipeline(collectors: list[Collector], start: date, end: date) -> dict:
             hard_failed_sources.add(collector.name)
             warnings.append({"source": collector.name, "error": f"{type(error).__name__}: {error}"})
 
+    resolved_warnings: dict[str, set[str]] = {}
+    for collector in collectors:
+        for source, errors in getattr(collector, "resolved_warnings", {}).items():
+            resolved_warnings.setdefault(source, set()).update(errors)
+    if resolved_warnings:
+        warnings = [
+            warning
+            for warning in warnings
+            if warning["error"] not in resolved_warnings.get(warning["source"], set())
+        ]
+
     selected = [document for document in documents.values() if document.matched_events]
     selected.sort(key=lambda document: (document.published_at, document.id), reverse=True)
     event_counts = Counter(event for document in selected for event in document.matched_events)
