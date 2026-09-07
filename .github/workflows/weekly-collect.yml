@@ -4,11 +4,6 @@ on:
   schedule:
     # Monday 06:00 Asia/Shanghai (GitHub cron is UTC).
     - cron: "0 22 * * 0"
-  push:
-    branches: [main]
-    paths:
-      - "stocktracker/**"
-      - "tests/**"
   workflow_dispatch:
     inputs:
       days:
@@ -25,7 +20,7 @@ permissions:
 
 concurrency:
   group: weekly-a-share-collector
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   collect:
