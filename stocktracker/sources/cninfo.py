@@ -26,9 +26,11 @@ class CninfoCollector:
         self.page_size = page_size
         self.max_pages = max_pages
         self.warnings: list[str] = []
+        self.failed_queries: set[tuple[str, str]] = set()
 
     def collect(self, start: date, end: date) -> list[Document]:
         self.warnings = []
+        self.failed_queries = set()
         documents: dict[str, Document] = {}
         successful_queries = 0
         for term in CNINFO_SEARCH_TERMS:
@@ -52,6 +54,7 @@ class CninfoCollector:
                             )
                     successful_queries += 1
                 except Exception as error:
+                    self.failed_queries.add((term, column))
                     message = f"query term={term!r} column={column} failed: {type(error).__name__}: {error}"
                     self.warnings.append(message)
                     LOG.warning(message)
