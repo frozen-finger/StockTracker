@@ -58,6 +58,14 @@ class PaginatedHttp:
         )
 
 
+class SelectiveFailureHttp:
+    def request(self, method: str, url: str, **kwargs):
+        data = kwargs.get("data") or {}
+        if data.get("searchkey") == "董事候选人" and data.get("column") == "sse":
+            raise RuntimeError("temporary SSE failure")
+        return FakeResponse({"hasMore": False, "announcements": []})
+
+
 def test_query_and_mapping() -> None:
     collector = CninfoCollector(FakeHttp())
     items = list(collector._query("权益变动报告书", "szse", date(2024, 9, 1), date(2024, 9, 11)))
@@ -83,3 +91,13 @@ def test_optional_page_cap_surfaces_truncation_warning() -> None:
     items = list(collector._query("股东提案", "szse", date(2024, 9, 1), date(2024, 9, 11)))
     assert len(items) == 1
     assert "truncated after 1 pages" in collector.warnings[0]
+
+
+def test_collect_tracks_failed_term_exchange_pair() -> None:
+    collector = CninfoCollector(SelectiveFailureHttp())
+    collector.collect(date(2026, 8, 31), date(2026, 9, 7))
+
+    key = ("董事候选人", "sse")
+    assert collector.failed_queries == {key}
+    assert key in collector.failed_query_errors
+    assert "temporary SSE failure" in collector.failed_query_errors[key]
