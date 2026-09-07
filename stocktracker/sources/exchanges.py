@@ -5,7 +5,7 @@ import json
 import logging
 import re
 from datetime import date, datetime
-from typing import Any
+from typing import Any, Iterable
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
@@ -45,37 +45,86 @@ class FallbackAwareCninfoCollector(CninfoCollector):
 class ExchangeFallbackCollector:
     name = "exchange_fallback"
 
-    def __init__(self, http: HttpClient, primary: Any) -> None:
+    def __init__(
+        self,
+        http: HttpClient,
+        primary: Any,
+        collectors: Iterable[Any] | None = None,
+    ) -> None:
         self.primary = primary
-        self.collectors = [
+        configured = list(collectors) if collectors is not None else [
             SseAnnouncementCollector(http),
             SzseAnnouncementCollector(http),
             BseAnnouncementCollector(http),
         ]
+        self.collectors = {collector.name: collector for collector in configured}
         self.warnings: list[str] = []
+        self.recovered_queries: set[tuple[str, str]] = set()
+        self.unrecovered_queries: set[tuple[str, str]] = set()
+        self.resolved_warnings: dict[str, set[str]] = {}
 
     def collect(self, start: date, end: date) -> list[Document]:
         self.warnings = []
-        if not getattr(self.primary, "failed", False):
+        self.recovered_queries = set()
+        self.resolved_warnings = {}
+        failed_queries = set(getattr(self.primary, "failed_queries", set()))
+        self.unrecovered_queries = set(failed_queries)
+        if not failed_queries:
             return []
 
+        targets: dict[str, set[str]] = {}
+        for term, column in failed_queries:
+            targets.setdefault(column, set()).add(term)
+
         documents: dict[str, Document] = {}
+        attempted_sources = 0
         successful_sources = 0
-        for collector in self.collectors:
+        for column, terms in sorted(targets.items()):
+            collector = self.collectors.get(column)
+            if collector is None:
+                message = f"no fallback collector configured for CNInfo column={column}"
+                self.warnings.append(message)
+                LOG.warning(message)
+                continue
+
+            attempted_sources += 1
             try:
-                collected = collector.collect(start, end)
+                collected = collector.collect_terms(sorted(terms), start, end)
                 successful_sources += 1
                 for warning in collector.warnings:
                     self.warnings.append(f"{collector.name}: {warning}")
                 for document in collected:
                     documents[document.id] = document
+                failed_terms = set(getattr(collector, "failed_terms", set()))
+                for term in terms:
+                    key = (term, column)
+                    if term not in failed_terms:
+                        self.recovered_queries.add(key)
             except Exception as error:
                 message = f"{collector.name} failed: {type(error).__name__}: {error}"
                 self.warnings.append(message)
                 LOG.warning(message)
 
-        if successful_sources == 0:
-            raise RuntimeError("all exchange fallback sources failed")
+        if attempted_sources and successful_sources == 0:
+            raise RuntimeError("all targeted exchange fallback sources failed")
+
+        self.unrecovered_queries = failed_queries - self.recovered_queries
+        recovered_messages = {
+            message
+            for key, message in getattr(self.primary, "failed_query_errors", {}).items()
+            if key in self.recovered_queries
+        }
+        if getattr(self.primary, "failed", False) and not self.unrecovered_queries:
+            recovered_messages.add("RuntimeError: all CNInfo queries failed")
+        if recovered_messages:
+            self.resolved_warnings[self.primary.name] = recovered_messages
+
+        if self.recovered_queries:
+            LOG.info(
+                "Exchange fallback recovered %s/%s failed CNInfo queries",
+                len(self.recovered_queries),
+                len(failed_queries),
+            )
         return list(documents.values())
 
 
@@ -88,6 +137,13 @@ class _BaseExchangeCollector:
         self.page_size = page_size
         self.max_pages = max_pages
         self.warnings: list[str] = []
+        self.failed_terms: set[str] = set()
+
+    def collect(self, start: date, end: date) -> list[Document]:
+        return self.collect_terms(CNINFO_SEARCH_TERMS, start, end)
+
+    def collect_terms(self, terms: Iterable[str], start: date, end: date) -> list[Document]:
+        raise NotImplementedError
 
     def _document(
         self,
@@ -142,6 +198,7 @@ class _BaseExchangeCollector:
     def _warn_truncated(self, term: str) -> None:
         message = f"query term={term!r} truncated after {self.max_pages} pages"
         self.warnings.append(message)
+        self.failed_terms.add(term)
         LOG.warning("%s: %s", self.name, message)
 
 
@@ -149,23 +206,29 @@ class SseAnnouncementCollector(_BaseExchangeCollector):
     name = "sse"
     source_name = "上海证券交易所"
 
-    def collect(self, start: date, end: date) -> list[Document]:
+    def collect_terms(self, terms: Iterable[str], start: date, end: date) -> list[Document]:
         self.warnings = []
+        self.failed_terms = set()
         documents: dict[str, Document] = {}
-        successful_queries = 0
-        for term in CNINFO_SEARCH_TERMS:
+        successful_calls = 0
+        term_list = list(dict.fromkeys(terms))
+        for term in term_list:
+            successful_stock_types = 0
             for stock_type in ("1", "8"):
                 try:
                     for item in self._query(term, stock_type, start, end):
                         document = self._from_item(item, term)
                         documents[document.id] = document
-                    successful_queries += 1
+                    successful_calls += 1
+                    successful_stock_types += 1
                 except Exception as error:
                     message = f"query term={term!r} stock_type={stock_type} failed: {type(error).__name__}: {error}"
                     self.warnings.append(message)
                     LOG.warning("%s: %s", self.name, message)
-        if successful_queries == 0:
-            raise RuntimeError("all SSE queries failed")
+            if successful_stock_types < 2:
+                self.failed_terms.add(term)
+        if term_list and successful_calls == 0:
+            raise RuntimeError("all targeted SSE queries failed")
         return list(documents.values())
 
     def _query(self, term: str, stock_type: str, start: date, end: date):
@@ -228,22 +291,25 @@ class SzseAnnouncementCollector(_BaseExchangeCollector):
     name = "szse"
     source_name = "深圳证券交易所"
 
-    def collect(self, start: date, end: date) -> list[Document]:
+    def collect_terms(self, terms: Iterable[str], start: date, end: date) -> list[Document]:
         self.warnings = []
+        self.failed_terms = set()
         documents: dict[str, Document] = {}
-        successful_queries = 0
-        for term in CNINFO_SEARCH_TERMS:
+        successful_calls = 0
+        term_list = list(dict.fromkeys(terms))
+        for term in term_list:
             try:
                 for item in self._query(term, start, end):
                     document = self._from_item(item, term)
                     documents[document.id] = document
-                successful_queries += 1
+                successful_calls += 1
             except Exception as error:
+                self.failed_terms.add(term)
                 message = f"query term={term!r} failed: {type(error).__name__}: {error}"
                 self.warnings.append(message)
                 LOG.warning("%s: %s", self.name, message)
-        if successful_queries == 0:
-            raise RuntimeError("all SZSE queries failed")
+        if term_list and successful_calls == 0:
+            raise RuntimeError("all targeted SZSE queries failed")
         return list(documents.values())
 
     def _query(self, term: str, start: date, end: date):
@@ -316,23 +382,26 @@ class BseAnnouncementCollector(_BaseExchangeCollector):
         "disclosureSubType",
     )
 
-    def collect(self, start: date, end: date) -> list[Document]:
+    def collect_terms(self, terms: Iterable[str], start: date, end: date) -> list[Document]:
         self.warnings = []
+        self.failed_terms = set()
         self.http.request("GET", BSE_REFERER, headers={"Referer": "https://www.bse.cn/"})
         documents: dict[str, Document] = {}
-        successful_queries = 0
-        for term in CNINFO_SEARCH_TERMS:
+        successful_calls = 0
+        term_list = list(dict.fromkeys(terms))
+        for term in term_list:
             try:
                 for item in self._query(term, start, end):
                     document = self._from_item(item, term)
                     documents[document.id] = document
-                successful_queries += 1
+                successful_calls += 1
             except Exception as error:
+                self.failed_terms.add(term)
                 message = f"query term={term!r} failed: {type(error).__name__}: {error}"
                 self.warnings.append(message)
                 LOG.warning("%s: %s", self.name, message)
-        if successful_queries == 0:
-            raise RuntimeError("all BSE queries failed")
+        if term_list and successful_calls == 0:
+            raise RuntimeError("all targeted BSE queries failed")
         return list(documents.values())
 
     def _query(self, term: str, start: date, end: date):
