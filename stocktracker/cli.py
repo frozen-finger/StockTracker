@@ -32,7 +32,9 @@ def main() -> int:
     # CNInfo is the preferred aggregation source, but fail fast so a CNInfo outage
     # cannot consume most of the workflow timeout before official-exchange fallback runs.
     cninfo_http = HttpClient(timeout=min(args.timeout, 8), retries=1)
-    fallback_http = HttpClient(timeout=args.timeout)
+    # Exchange fallbacks should also fail reasonably quickly: they are recovery paths,
+    # and an unavailable exchange endpoint must not stall the whole weekly workflow.
+    fallback_http = HttpClient(timeout=min(args.timeout, 10), retries=2)
     cninfo = FallbackAwareCninfoCollector(cninfo_http)
     collectors = [
         cninfo,
