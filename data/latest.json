@@ -1,27 +1,66 @@
 {
   "schema_version": 1,
-  "status": "complete",
-  "generated_at": "2026-09-07T12:27:06.329843+08:00",
+  "status": "partial",
+  "generated_at": "2026-09-07T13:00:57.579227+08:00",
   "window_start": "2026-08-31",
   "window_end": "2026-09-07",
   "stats": {
-    "document_count": 1413,
+    "document_count": 1262,
     "source_counts": {
-      "cninfo": 1069,
-      "exchange_fallback": 344,
-      "bing_news": 0
+      "cninfo": 886,
+      "exchange_fallback": 376,
+      "bing_news": 0,
+      "eastmoney_news": 0
     },
     "event_counts": {
-      "director_nomination": 110,
+      "director_nomination": 142,
       "equity_change_report": 75,
-      "extraordinary_general_meeting": 1240,
+      "extraordinary_general_meeting": 1057,
       "future_12m_increase": 8,
       "largest_shareholder_change": 42,
       "shareholder_proposal": 35
     }
   },
-  "warnings": [],
+  "warnings": [
+    {
+      "source": "cninfo",
+      "error": "query term='权益变动报告书' column=sse failed: HTTPError: 502 Server Error: Bad Gateway for url: https://www.cninfo.com.cn/new/hisAnnouncement/query"
+    },
+    {
+      "source": "cninfo",
+      "error": "query term='临时股东大会' column=sse failed: HTTPError: 502 Server Error: Bad Gateway for url: https://www.cninfo.com.cn/new/hisAnnouncement/query"
+    },
+    {
+      "source": "cninfo",
+      "error": "query term='临时股东会' column=sse failed: HTTPError: 502 Server Error: Bad Gateway for url: https://www.cninfo.com.cn/new/hisAnnouncement/query"
+    },
+    {
+      "source": "exchange_fallback",
+      "error": "sse failed: RuntimeError: all targeted SSE queries failed"
+    }
+  ],
   "documents": [
+    {
+      "id": "szse:1225550309",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "中信海直：独立董事候选人声明与承诺（孙兵）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-07/ebc6771b-3234-400f-b913-414a0df25d36.PDF",
+      "published_at": "2026-09-07T00:00:00+08:00",
+      "company": "中信海直",
+      "stock_code": "000099",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：中信海直：独立董事候选人声明与承诺（孙兵）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
     {
       "id": "szse:1225550306",
       "source_type": "official",
@@ -411,6 +450,69 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225550003",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "麦克奥迪：独立董事候选人声明与承诺（池骋）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/b69b98f7-5de8-47be-acd3-bec85db9b5e0.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "麦克奥迪",
+      "stock_code": "300341",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：麦克奥迪：独立董事候选人声明与承诺（池骋）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549917",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "中色股份：独立董事候选人声明与承诺（张国军）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/f07ca6ef-6717-41cc-a07a-84cdb0cd52c6.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "中色股份",
+      "stock_code": "000758",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：中色股份：独立董事候选人声明与承诺（张国军）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549916",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "中色股份：独立董事候选人声明与承诺（宋卫东）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/79493d0d-c7b2-4e6d-852d-08f79c7081ff.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "中色股份",
+      "stock_code": "000758",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：中色股份：独立董事候选人声明与承诺（宋卫东）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225549912",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -470,6 +572,27 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：贝因美：关于2026年第二次临时股东会增加临时提案暨股东会补充通知的公告"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549733",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "ST合力泰：独立董事候选人关于参加独立董事培训并取得独立董事资格证书的承诺（王启兴）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/3e3a2d5b-6a3b-4511-8612-f49538602c7f.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "ST合力泰",
+      "stock_code": "002217",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：ST合力泰：独立董事候选人关于参加独立董事培训并取得独立董事资格证书的承诺（王启兴）"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -590,6 +713,69 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：西安饮食：关于召开2026年第四次临时股东会的通知"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549668",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "麦克奥迪：独立董事候选人声明与承诺（谢小明）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/61694265-5492-4134-9cd1-dc53411353b7.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "麦克奥迪",
+      "stock_code": "300341",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：麦克奥迪：独立董事候选人声明与承诺（谢小明）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549667",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "麦克奥迪：独立董事候选人声明与承诺（黄宇光）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/9a7843da-8021-425c-8da2-32ee0b9c370b.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "麦克奥迪",
+      "stock_code": "300341",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：麦克奥迪：独立董事候选人声明与承诺（黄宇光）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549666",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "麦克奥迪：独立董事候选人声明与承诺（蔡昌）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/ef3904ea-a7ff-4c51-9f1b-ce4a7d201e56.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "麦克奥迪",
+      "stock_code": "300341",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：麦克奥迪：独立董事候选人声明与承诺（蔡昌）"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -754,6 +940,69 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225549320",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "新莱福：独立董事候选人声明与承诺（胡志勇）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/e36a359c-d9ef-49bf-9254-f12f6d8bd6a8.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "新莱福",
+      "stock_code": "301323",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：新莱福：独立董事候选人声明与承诺（胡志勇）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549319",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "新莱福：独立董事候选人声明与承诺（李辉志）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/02740e00-65cc-469e-a622-2d7433b4eb2b.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "新莱福",
+      "stock_code": "301323",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：新莱福：独立董事候选人声明与承诺（李辉志）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549318",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "新莱福：独立董事候选人声明与承诺（李红）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/4fa7ec02-e590-4ff0-b5b5-8338c6da9ba8.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "新莱福",
+      "stock_code": "301323",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：新莱福：独立董事候选人声明与承诺（李红）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225549315",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -894,6 +1143,69 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225549227",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "鸿合科技：独立董事候选人声明与承诺（李姚矿）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/f0b5ef93-ce72-491d-8efb-d750a227d765.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "鸿合科技",
+      "stock_code": "002955",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：鸿合科技：独立董事候选人声明与承诺（李姚矿）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549225",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "鸿合科技：独立董事候选人声明与承诺（宋利国）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/ffe5015b-8360-471b-838f-ed0d15cbf59c.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "鸿合科技",
+      "stock_code": "002955",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：鸿合科技：独立董事候选人声明与承诺（宋利国）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549224",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "鸿合科技：独立董事候选人声明与承诺（黄福平）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/e2669a3a-40cb-4ffc-a1f5-5825a877f769.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "鸿合科技",
+      "stock_code": "002955",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：鸿合科技：独立董事候选人声明与承诺（黄福平）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225549220",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -910,6 +1222,26 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：鸿合科技：关于召开2026年第二次临时股东会的通知"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225549219",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "鸿合科技：董事会提名委员会关于董事候选人任职资格的审查意见",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/f169a2fa-8e07-4de9-950b-f3dbbfda6e69.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "鸿合科技",
+      "stock_code": "002955",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：鸿合科技：董事会提名委员会关于董事候选人任职资格的审查意见"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -1177,6 +1509,50 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225548820",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "*ST广糖：广西农投糖业集团股份有限公司第九届董事会提名委员会关于总经理及第九届董事会非独立董事候选人任职资格的审查意见",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/2dbac4f4-849d-4384-9cfc-37f46f6621e3.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "*ST广糖",
+      "stock_code": "000911",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "非独立董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：*ST广糖：广西农投糖业集团股份有限公司第九届董事会提名委员会关于总经理及第九届董事会非独立董事候选人任职资格的审查意见"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225548819",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "*ST广糖：广西农投糖业集团股份有限公司关于提名非独立 董事候选人的公告",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/6f3478f7-f1c9-4472-bb39-b9b4757a235a.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "*ST广糖",
+      "stock_code": "000911",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "非独立董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：*ST广糖：广西农投糖业集团股份有限公司关于提名非独立 董事候选人的公告"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225548818",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -1376,6 +1752,27 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：四环生物：江苏四环生物股份有限公司关于召开2026年第二次临时股东会的通知"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225548247",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "立方制药：独立董事候选人声明与承诺",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-05/1d61f980-930d-49ac-8483-458e7be5fbf8.PDF",
+      "published_at": "2026-09-05T00:00:00+08:00",
+      "company": "立方制药",
+      "stock_code": "003020",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：立方制药：独立董事候选人声明与承诺"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -3682,27 +4079,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225548996",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "603629：北京市天元律师事务所关于利通电子2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225548996.PDF",
-      "published_at": "2026-09-05T00:00:00+08:00",
-      "company": "利通电子",
-      "stock_code": "603629",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：603629：北京市天元律师事务所关于利通电子2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225548995",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -3930,48 +4306,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：安泰集团2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225548955",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225548955.PDF",
-      "published_at": "2026-09-05T00:00:00+08:00",
-      "company": "中电港",
-      "stock_code": "001287",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225548954",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市中伦（广州）律师事务所关于侨银城市管理股份有限公司2026年第五次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225548954.PDF",
-      "published_at": "2026-09-05T00:00:00+08:00",
-      "company": "侨银股份",
-      "stock_code": "002973",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京市中伦（广州）律师事务所关于侨银城市管理股份有限公司2026年第五次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -6251,10 +6585,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：中国国际海运集装箱（集团）股份有限公司关于召开2026年第二次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：中国国际海运集装箱（集团）股份有限公司关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -8908,6 +9243,27 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225546974",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "*ST棒杰：上市公司独立董事候选人声明与承诺",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-04/e0ebf662-3c39-4ebc-8f61-e373890706c6.PDF",
+      "published_at": "2026-09-04T00:00:00+08:00",
+      "company": "*ST棒杰",
+      "stock_code": "002634",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：*ST棒杰：上市公司独立董事候选人声明与承诺"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225546972",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -10008,11 +10364,10 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东大会",
-        "临时股东会"
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东大会、临时股东会；公告标题：浙江天册（深圳）律师事务所关于岳阳兴长石化股份有限公司第七十四次（临时）股东会的法律意见书"
+        "巨潮全文检索命中：临时股东大会；公告标题：浙江天册（深圳）律师事务所关于岳阳兴长石化股份有限公司第七十四次（临时）股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -10029,11 +10384,10 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东大会",
-        "临时股东会"
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东大会、临时股东会；公告标题：第七十四次（临时）股东会决议公告"
+        "巨潮全文检索命中：临时股东大会；公告标题：第七十四次（临时）股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -10139,27 +10493,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225547311",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "H股公告：有关临时股东会的记录日期",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225547311.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "丽珠集团",
-      "stock_code": "000513",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：H股公告：有关临时股东会的记录日期"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -10351,11 +10684,10 @@
       "matched_keywords": [
         "临时提案",
         "临时股东大会",
-        "临时股东会",
         "股东提案"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时提案、临时股东大会、临时股东会、股东提案；公告标题：董事会关于对股东临时提案不予提交股东会审议事项说明的公告"
+        "巨潮全文检索命中：临时提案、临时股东大会、股东提案；公告标题：董事会关于对股东临时提案不予提交股东会审议事项说明的公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -11094,10 +11426,11 @@
         "临时股东会",
         "临时提案",
         "增加临时提案",
+        "临时股东大会",
         "股东提案"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时提案、增加临时提案、股东提案；公告标题：关于2026年第一次临时股东会增加临时提案并延期召开的公告"
+        "巨潮全文检索命中：临时股东会、临时提案、增加临时提案、临时股东大会、股东提案；公告标题：关于2026年第一次临时股东会增加临时提案并延期召开的公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -11454,48 +11787,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：上海市锦天城律师事务所关于杭州新坐标科技股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225546574",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "中国航发动力股份有限公司2026年第三次临时股东会会议材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225546574.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "航发动力",
-      "stock_code": "600893",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：中国航发动力股份有限公司2026年第三次临时股东会会议材料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225546571",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会、2026年第三次A股类别股东会议及2026年第三次H股类别股东会议的公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225546571.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "泰格医药",
-      "stock_code": "300347",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第三次临时股东会、2026年第三次A股类别股东会议及2026年第三次H股类别股东会议的公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -12368,26 +12659,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225545938",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "淮河能源（集团）股份有限公司2026年第二次临时股东会材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225545938.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "淮河能源",
-      "stock_code": "600575",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：淮河能源（集团）股份有限公司2026年第二次临时股东会材料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225545936",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -12400,10 +12671,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议资料（修订版）"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会会议资料（修订版）"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -12660,26 +12932,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225545711",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225545711.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "拉芳家化",
-      "stock_code": "603630",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225545697",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -12827,27 +13079,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225545645",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225545645.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "金橙子",
-      "stock_code": "688291",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225545636",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -12886,27 +13117,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：广东原尚物流股份有限公司2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225545619",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "有方科技：2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225545619.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "有方科技",
-      "stock_code": "688159",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：有方科技：2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -12991,27 +13201,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225545574",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "深圳市联赢激光股份有限公司2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-04/1225545574.PDF",
-      "published_at": "2026-09-04T00:00:00+08:00",
-      "company": "联赢激光",
-      "stock_code": "688518",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：深圳市联赢激光股份有限公司2026年第一次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -14731,27 +14920,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225546665",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225546665.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "智新电子",
-      "stock_code": "920212",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225546589",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -14931,10 +15099,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第四次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第四次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -14951,10 +15120,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：广东信达律师事务所关于欧菲光集团股份有限公司2026年第四次临时股东会的法律意见书"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：广东信达律师事务所关于欧菲光集团股份有限公司2026年第四次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -14971,10 +15141,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第四次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第四次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -15207,27 +15378,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：方大炭素关于召开2026年第七次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225544794",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "君泽君律师事务所关于公司2026年第二次临时股东会见证之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544794.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "盈新发展",
-      "stock_code": "000620",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：君泽君律师事务所关于公司2026年第二次临时股东会见证之法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -15589,10 +15739,11 @@
       ],
       "matched_keywords": [
         "临时股东会",
+        "临时股东大会",
         "第一大股东"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、第一大股东；公告标题：2026年第一次临时股东会法律意见书"
+        "巨潮全文检索命中：临时股东会、临时股东大会、第一大股东；公告标题：2026年第一次临时股东会法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -15767,26 +15918,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：控股股东变更；公告标题：吉华集团关于控股股东协议转让公司股份暨控制权发生变更的进展公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225544306",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "设计总院2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544306.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "设计总院",
-      "stock_code": "603357",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：设计总院2026年第一次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -15980,48 +16111,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225543984",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543984.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "江瀚新材",
-      "stock_code": "603281",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543977",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（上海）事务所关于湖北江瀚新材料股份有限公司2026年第一次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543977.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "江瀚新材",
-      "stock_code": "603281",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：国浩律师（上海）事务所关于湖北江瀚新材料股份有限公司2026年第一次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225543975",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -16039,27 +16128,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京中伦（武汉）律师事务所关于湖北兴福电子材料股份有限公司2026年第三次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543969",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "湖北兴福电子材料股份有限公司2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543969.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "兴福电子",
-      "stock_code": "688545",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：湖北兴福电子材料股份有限公司2026年第三次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -16085,26 +16153,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时提案、增加临时提案、临时股东大会、股东提案；公告标题：关于2026年第七次临时股东会增加临时提案暨2026年第七次临时股东会补充通知的公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543952",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "云天化2026年第四次临时股东会的法律意见",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543952.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "云天化",
-      "stock_code": "600096",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：云天化2026年第四次临时股东会的法律意见"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -16193,26 +16241,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225543911",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543911.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "*ST航图",
-      "stock_code": "688066",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225543890",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -16251,27 +16279,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第五次临时股东会通知的公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543754",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "中国人寿2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543754.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "中国人寿",
-      "stock_code": "601628",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：中国人寿2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -16349,10 +16356,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江河集团2026年第二次临时股东会议案"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：江河集团2026年第二次临时股东会议案"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -16369,31 +16377,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江河集团2026年第二次临时股东会通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543652",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543652.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "石化油服",
-      "stock_code": "600871",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
         "临时股东会",
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第一次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：江河集团2026年第二次临时股东会通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -16729,27 +16717,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：无锡市德科立光电子技术股份有限公司2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225543589",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "长久物流：2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543589.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "长久物流",
-      "stock_code": "603569",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：长久物流：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -17319,26 +17286,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225543130",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北芯生命：2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-03/1225543130.PDF",
-      "published_at": "2026-09-03T00:00:00+08:00",
-      "company": "北芯生命",
-      "stock_code": "688712",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北芯生命：2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225543121",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -17351,10 +17298,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会会议资料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -17575,6 +17523,27 @@
       "content_status": "fulltext_search_matched"
     },
     {
+      "id": "szse:1225544466",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "豪恩汽电：独立董事候选人声明与承诺（刘映）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-02/1784ad81-d9a6-46d2-bd7d-4defdb050494.PDF",
+      "published_at": "2026-09-02T19:02:09+08:00",
+      "company": "豪恩汽电",
+      "stock_code": "301488",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：豪恩汽电：独立董事候选人声明与承诺（刘映）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "cninfo:1225544466",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -17594,6 +17563,27 @@
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺（刘映）"
       ],
       "content_status": "fulltext_search_matched"
+    },
+    {
+      "id": "szse:1225544465",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "豪恩汽电：独立董事候选人声明与承诺（古范球）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-02/1354fced-f164-457a-a7b1-747c7c9b50ce.PDF",
+      "published_at": "2026-09-02T19:02:07+08:00",
+      "company": "豪恩汽电",
+      "stock_code": "301488",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：豪恩汽电：独立董事候选人声明与承诺（古范球）"
+      ],
+      "content_status": "exchange_search_matched"
     },
     {
       "id": "cninfo:1225544465",
@@ -18268,6 +18258,69 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：农 产 品：关于召开2026年第三次临时股东会的通知"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225542458",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "赛微电子：独立董事候选人声明与承诺（张路）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-02/a6799210-8478-46cd-a928-e7ef4be4e0c9.PDF",
+      "published_at": "2026-09-02T00:00:00+08:00",
+      "company": "赛微电子",
+      "stock_code": "300456",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：赛微电子：独立董事候选人声明与承诺（张路）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225542457",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "赛微电子：独立董事候选人声明与承诺（付三中）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-02/aa017ac8-3e5b-4ef1-be7c-5ecc46112d8f.PDF",
+      "published_at": "2026-09-02T00:00:00+08:00",
+      "company": "赛微电子",
+      "stock_code": "300456",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：赛微电子：独立董事候选人声明与承诺（付三中）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225542456",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "赛微电子：独立董事候选人声明与承诺（王玮）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-02/47d38c69-2961-4bcb-8890-8c9be1b4d88e.PDF",
+      "published_at": "2026-09-02T00:00:00+08:00",
+      "company": "赛微电子",
+      "stock_code": "300456",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：赛微电子：独立董事候选人声明与承诺（王玮）"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -19472,10 +19525,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：路维光电2026年第二次临时股东会会议资料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：路维光电2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -19830,10 +19884,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：道通科技2026年第三次临时股东会会议资料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：道通科技2026年第三次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -20370,10 +20425,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议资料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -20648,11 +20704,10 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东大会",
-        "临时股东会"
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东大会、临时股东会；公告标题：电投水电2026年第二次（临时）股东会会议资料"
+        "巨潮全文检索命中：临时股东大会；公告标题：电投水电2026年第二次（临时）股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -20732,10 +20787,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：罗普特科技集团股份有限公司2026年第二次临时股东会会议材料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：罗普特科技集团股份有限公司2026年第二次临时股东会会议材料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -20814,27 +20870,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225540372",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "凯因科技2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540372.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "凯因科技",
-      "stock_code": "688687",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：凯因科技2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225540335",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -20852,46 +20887,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京昊华能源股份有限公司关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225540330",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540330.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "深高速",
-      "stock_code": "600548",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225540325",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京昊华能源股份有限公司2026年第三次临时股东会会议材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540325.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "昊华能源",
-      "stock_code": "601101",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京昊华能源股份有限公司2026年第三次临时股东会会议材料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -20938,26 +20933,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225540319",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会通函",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540319.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "深高速",
-      "stock_code": "600548",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会通函"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225540309",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -20975,27 +20950,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：ST星农2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225540269",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "上海先惠自动化技术股份有限公司2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540269.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "先惠技术",
-      "stock_code": "688155",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：上海先惠自动化技术股份有限公司2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -21033,10 +20987,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -21220,31 +21175,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：凌源钢铁股份有限公司2026年第三次临时股东会文件"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225540200",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "禾丰股份2026年第一次临时股东会会议材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540200.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "禾丰股份",
-      "stock_code": "603609",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
         "临时股东会",
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：禾丰股份2026年第一次临时股东会会议材料"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：凌源钢铁股份有限公司2026年第三次临时股东会文件"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -21544,27 +21479,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225540040",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的提示性公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225540040.PDF",
-      "published_at": "2026-09-02T00:00:00+08:00",
-      "company": "新宙邦",
-      "stock_code": "300037",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第三次临时股东会的提示性公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -22019,6 +21933,27 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225541837",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "东杰智能：上市公司独立董事候选人声明与承诺",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/8ff1ea9f-05f5-4bf2-86f1-d3b793e67f77.PDF",
+      "published_at": "2026-09-01T19:02:10+08:00",
+      "company": "东杰智能",
+      "stock_code": "300486",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：东杰智能：上市公司独立董事候选人声明与承诺"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225541834",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -22128,6 +22063,27 @@
         "巨潮全文检索命中：临时股东会、临时提案、增加临时提案、临时股东大会、股东提案；公告标题：关于2026年第一次临时股东会增加临时提案暨2026年第一次临时股东会补充通知的公告"
       ],
       "content_status": "fulltext_search_matched"
+    },
+    {
+      "id": "szse:1225541835",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "东杰智能：第九届董事会独立董事候选人关于参加独立董事培训并取得独立董事资格证书的承诺函",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/34671f2f-e130-4b1e-ac1b-7c72ff67706b.PDF",
+      "published_at": "2026-09-01T19:02:08+08:00",
+      "company": "东杰智能",
+      "stock_code": "300486",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：东杰智能：第九届董事会独立董事候选人关于参加独立董事培训并取得独立董事资格证书的承诺函"
+      ],
+      "content_status": "exchange_search_matched"
     },
     {
       "id": "cninfo:1225541835",
@@ -22805,6 +22761,48 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225538670",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "必创科技：独立董事候选人声明与承诺（周霞）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/57feeed3-2e9e-47c7-9859-16777237e84d.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "必创科技",
+      "stock_code": "300667",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：必创科技：独立董事候选人声明与承诺（周霞）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225538667",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "必创科技：独立董事候选人声明与承诺（范晋生）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/748f7cdd-1772-4911-a445-1334f9418891.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "必创科技",
+      "stock_code": "300667",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：必创科技：独立董事候选人声明与承诺（范晋生）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225538665",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -22861,6 +22859,27 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：拓日新能：2026年第二次临时股东会决议公告"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225538578",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "格林美：格林美股份有限公司独立董事候选人声明与承诺（夏洪应）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/107d8d4a-8af3-48a4-9e52-294336362969.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "格林美",
+      "stock_code": "002340",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：格林美：格林美股份有限公司独立董事候选人声明与承诺（夏洪应）"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -23221,6 +23240,27 @@
       ],
       "evidence_snippets": [
         "深圳证券交易所公告检索命中：临时股东会；公告标题：盛航股份：南京盛航海运股份有限公司2026年第五次临时股东会决议公告"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225537554",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "力诺药包：独立董事候选人声明与承诺（袁陈杰）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/03152826-ef30-4bb7-9a9c-5a8952372c98.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "力诺药包",
+      "stock_code": "301188",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：力诺药包：独立董事候选人声明与承诺（袁陈杰）"
       ],
       "content_status": "exchange_search_matched"
     },
@@ -23767,6 +23807,47 @@
       "content_status": "exchange_search_matched"
     },
     {
+      "id": "szse:1225536773",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "国瓷材料：独立董事候选人声明与承诺（海闻）",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/adf4d323-87d5-4d3a-928b-6881c175de88.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "国瓷材料",
+      "stock_code": "300285",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人",
+        "独立董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：国瓷材料：独立董事候选人声明与承诺（海闻）"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
+      "id": "szse:1225536771",
+      "source_type": "official",
+      "source_name": "深圳证券交易所",
+      "title": "国瓷材料：董事会提名委员会关于董事候选人任职资格的审查意见",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-01/c9a9ea34-c37b-4bb9-9fb7-097c95468140.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "国瓷材料",
+      "stock_code": "300285",
+      "matched_events": [
+        "director_nomination"
+      ],
+      "matched_keywords": [
+        "董事候选人"
+      ],
+      "evidence_snippets": [
+        "深圳证券交易所公告检索命中：董事候选人；公告标题：国瓷材料：董事会提名委员会关于董事候选人任职资格的审查意见"
+      ],
+      "content_status": "exchange_search_matched"
+    },
+    {
       "id": "szse:1225536769",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -23849,27 +23930,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225542486",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225542486.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "明阳科技",
-      "stock_code": "920663",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225542484",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -23896,68 +23956,6 @@
       "content_status": "extracted"
     },
     {
-      "id": "cninfo:1225542389",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京盈科（绵阳）律师事务所关于四川长虹新能源科技股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225542389.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "长虹能源",
-      "stock_code": "920239",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京盈科（绵阳）律师事务所关于四川长虹新能源科技股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225542388",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225542388.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "长虹能源",
-      "stock_code": "920239",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225542375",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225542375.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "绿亨科技",
-      "stock_code": "920866",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会决议"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225542374",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -23975,27 +23973,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538995",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "福建天衡联合（福州）律师事务所关于福建海通发展股份有限公司2026年第三次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538995.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "海通发展",
-      "stock_code": "603162",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：福建天衡联合（福州）律师事务所关于福建海通发展股份有限公司2026年第三次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24021,14 +23998,14 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538987",
+      "id": "cninfo:1225538972",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "联瑞新材2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538987.PDF",
+      "title": "福建海通发展股份有限公司2026年第三次临时股东会决议公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538972.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "联瑞新材",
-      "stock_code": "688300",
+      "company": "海通发展",
+      "stock_code": "603162",
       "matched_events": [
         "extraordinary_general_meeting"
       ],
@@ -24037,19 +24014,19 @@
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：联瑞新材2026年第三次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：福建海通发展股份有限公司2026年第三次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538971",
+      "id": "cninfo:1225538965",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "北京市康达（广州）律师事务所关于江苏联瑞新材料股份有限公司2026年第三次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538971.PDF",
+      "title": "上海市方达（北京）律师事务所关于江苏华辰变压器股份有限公司2026年第一次临时股东会的法律意见书",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538965.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "联瑞新材",
-      "stock_code": "688300",
+      "company": "江苏华辰",
+      "stock_code": "603097",
       "matched_events": [
         "extraordinary_general_meeting"
       ],
@@ -24058,19 +24035,19 @@
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京市康达（广州）律师事务所关于江苏联瑞新材料股份有限公司2026年第三次临时股东会的法律意见书"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：上海市方达（北京）律师事务所关于江苏华辰变压器股份有限公司2026年第一次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538950",
+      "id": "cninfo:1225538958",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538950.PDF",
+      "title": "江苏华辰2026年第一次临时股东会决议公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538958.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "夏厦精密",
-      "stock_code": "001306",
+      "company": "江苏华辰",
+      "stock_code": "603097",
       "matched_events": [
         "extraordinary_general_meeting"
       ],
@@ -24079,7 +24056,7 @@
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第一次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：江苏华辰2026年第一次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24105,27 +24082,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538888",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538888.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "英 力 特",
-      "stock_code": "000635",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第三次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538836",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -24147,26 +24103,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538823",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市金杜（青岛）律师事务所关于上海莱士血液制品股份有限公司2026年第二次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538823.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "上海莱士",
-      "stock_code": "002252",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市金杜（青岛）律师事务所关于上海莱士血液制品股份有限公司2026年第二次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538822",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -24179,10 +24115,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会会议决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24193,7 +24130,7 @@
       "title": "河南大有能源股份有限公司2026年第一次临时股东会决议公告",
       "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538746.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "大有能源",
+      "company": "<em>大</em>有能源",
       "stock_code": "600403",
       "matched_events": [
         "extraordinary_general_meeting",
@@ -24215,7 +24152,7 @@
       "title": "河南大有能源股份有限公司2026年第一次临时股东会法律意见书",
       "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538745.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "大有能源",
+      "company": "<em>大</em>有能源",
       "stock_code": "600403",
       "matched_events": [
         "extraordinary_general_meeting",
@@ -24227,26 +24164,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、第一大股东；公告标题：河南大有能源股份有限公司2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538734",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "九州通关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538734.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "九州通",
-      "stock_code": "600998",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：九州通关于召开2026年第三次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24339,14 +24256,14 @@
       "content_status": "extracted"
     },
     {
-      "id": "cninfo:1225538648",
+      "id": "cninfo:1225538631",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538648.PDF",
+      "title": "广东信达律师事务所关于深圳市拓日新能源科技股份有限公司2026年第二次临时股东会的法律意见书",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538631.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "拓荆科技",
-      "stock_code": "688072",
+      "company": "拓日新能",
+      "stock_code": "002218",
       "matched_events": [
         "extraordinary_general_meeting"
       ],
@@ -24355,7 +24272,7 @@
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第三次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：广东信达律师事务所关于深圳市拓日新能源科技股份有限公司2026年第二次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24372,10 +24289,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24421,47 +24339,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538565",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "南京新百关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538565.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "南京新百",
-      "stock_code": "600682",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：南京新百关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538465",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "贵州燃气集团股份有限公司关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538465.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "贵州燃气",
-      "stock_code": "600903",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：贵州燃气集团股份有限公司关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538463",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -24478,26 +24355,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人；公告标题：晨光新材董事会提名委员会关于高级管理人员候选人的任职资格审查意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538459",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京金诚同达（上海）律师事务所关于江西晨光新材料股份有限公司2026年第一次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538459.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "晨光新材",
-      "stock_code": "605399",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京金诚同达（上海）律师事务所关于江西晨光新材料股份有限公司2026年第一次临时股东会法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24523,67 +24380,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538433",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "河南黄河旋风股份有限公司2026年第四次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538433.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "黄河旋风",
-      "stock_code": "600172",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：河南黄河旋风股份有限公司2026年第四次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538271",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538271.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "拓荆科技",
-      "stock_code": "688072",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538237",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京大成（长春）律师事务所关于吉林亚泰（集团）股份有限公司召开2026年第七次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538237.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "亚泰集团",
-      "stock_code": "600881",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京大成（长春）律师事务所关于吉林亚泰（集团）股份有限公司召开2026年第七次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538236",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -24596,121 +24392,20 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：吉林亚泰（集团）股份有限公司2026年第七次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538215",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538215.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "衢州发展",
-      "stock_code": "600208",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538213",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第五次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538213.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "黄河旋风",
-      "stock_code": "600172",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第五次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538209",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538209.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "宇通重工",
-      "stock_code": "600817",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
         "临时股东会",
         "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：吉林亚泰（集团）股份有限公司2026年第七次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538208",
+      "id": "cninfo:1225538156",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538208.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "宇通重工",
-      "stock_code": "600817",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538204",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "厦门钨业2026年第四次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538204.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "厦门钨业",
-      "stock_code": "600549",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：厦门钨业2026年第四次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538157",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（天津）事务所关于北京盛通印刷股份有限公司2026年第三次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538157.PDF",
+      "title": "2026年第三次临时股东会决议公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538156.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
       "company": "盛通股份",
       "stock_code": "002599",
@@ -24718,30 +24413,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：国浩律师（天津）事务所关于北京盛通印刷股份有限公司2026年第三次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538142",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538142.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "中熔电气",
-      "stock_code": "301031",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第三次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24758,30 +24434,53 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538087",
+      "id": "cninfo:1225538088",
       "source_type": "official",
       "source_name": "巨潮资讯",
-      "title": "中远海发2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538087.PDF",
+      "title": "中信重工2026年第二次临时股东会决议公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538088.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "中远海发",
-      "stock_code": "601866",
+      "company": "中信重工",
+      "stock_code": "601608",
       "matched_events": [
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：中远海发2026年第一次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：中信重工2026年第二次临时股东会决议公告"
+      ],
+      "content_status": "fulltext_search_matched"
+    },
+    {
+      "id": "cninfo:1225538083",
+      "source_type": "official",
+      "source_name": "巨潮资讯",
+      "title": "2026年第一次临时股东会会议资料",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538083.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "文灿股份",
+      "stock_code": "603348",
+      "matched_events": [
+        "extraordinary_general_meeting"
+      ],
+      "matched_keywords": [
+        "临时股东会",
+        "临时股东大会"
+      ],
+      "evidence_snippets": [
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24828,47 +24527,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538075",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "中信重工2026年第二次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538075.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "中信重工",
-      "stock_code": "601608",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：中信重工2026年第二次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538071",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市通商律师事务所关于安琪酵母股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538071.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "安琪酵母",
-      "stock_code": "600298",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市通商律师事务所关于安琪酵母股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538068",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -24886,67 +24544,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：国浩律师（上海）事务所关于中远海运发展股份有限公司2026年第一次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538067",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "安琪酵母股份有限公司2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538067.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "安琪酵母",
-      "stock_code": "600298",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：安琪酵母股份有限公司2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538063",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "卧龙新能2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538063.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "卧龙新能",
-      "stock_code": "600173",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：卧龙新能2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538060",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "*ST柳化2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538060.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "*ST柳化",
-      "stock_code": "600423",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：*ST柳化2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -24972,47 +24569,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225538051",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538051.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "能科科技",
-      "stock_code": "603859",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538050",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "东鹏饮料（集团）股份有限公司2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538050.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "东鹏饮料",
-      "stock_code": "605499",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：东鹏饮料（集团）股份有限公司2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225538046",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -25025,10 +24581,32 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京德恒（深圳）律师事务所关于东鹏饮料（集团）股份有限公司2026年第二次临时股东会之法律意见"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京德恒（深圳）律师事务所关于东鹏饮料（集团）股份有限公司2026年第二次临时股东会之法律意见"
+      ],
+      "content_status": "fulltext_search_matched"
+    },
+    {
+      "id": "cninfo:1225538039",
+      "source_type": "official",
+      "source_name": "巨潮资讯",
+      "title": "哈投股份关于召开2026年第一次临时股东会的通知",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538039.PDF",
+      "published_at": "2026-09-01T00:00:00+08:00",
+      "company": "哈投股份",
+      "stock_code": "600864",
+      "matched_events": [
+        "extraordinary_general_meeting"
+      ],
+      "matched_keywords": [
+        "临时股东会",
+        "临时股东大会"
+      ],
+      "evidence_snippets": [
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：哈投股份关于召开2026年第一次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25050,170 +24628,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：北京市君泽君律师事务所关于三全食品股份有限公司2026年第一次临时股东会的法律意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538013",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538013.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "三全食品",
-      "stock_code": "002216",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538011",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538011.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "泰达股份",
-      "stock_code": "000652",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538009",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225538009.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "德迈仕",
-      "stock_code": "301007",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537972",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于汇绿生态科技集团股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537972.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "汇绿生态",
-      "stock_code": "001267",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于汇绿生态科技集团股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537971",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537971.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "汇绿生态",
-      "stock_code": "001267",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537766",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537766.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "农尚环境",
-      "stock_code": "300536",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537713",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "上海段和段律师事务所关于华映科技（集团）股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537713.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "华映科技",
-      "stock_code": "000536",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：上海段和段律师事务所关于华映科技（集团）股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537712",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537712.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "华映科技",
-      "stock_code": "000536",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25277,67 +24691,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：湖北华强科技股份有限公司董事会提名委员会关于第二届董事会独立董事候选人的审核意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537631",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "湖北华强科技股份有限公司2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537631.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "华强科技",
-      "stock_code": "688151",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：湖北华强科技股份有限公司2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537593",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市天元律师事务所关于北京万集科技股份有限公司2026年第二次临时股东会的法律意见",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537593.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "万集科技",
-      "stock_code": "300552",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市天元律师事务所关于北京万集科技股份有限公司2026年第二次临时股东会的法律意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537592",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537592.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "万集科技",
-      "stock_code": "300552",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25426,46 +24779,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225537497",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537497.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "润达医疗",
-      "stock_code": "603108",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537496",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "科华控股股份有限公司2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537496.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "科华控股",
-      "stock_code": "603161",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：科华控股股份有限公司2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537286",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -25478,10 +24791,11 @@
         "extraordinary_general_meeting"
       ],
       "matched_keywords": [
-        "临时股东会"
+        "临时股东会",
+        "临时股东大会"
       ],
       "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
+        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25503,46 +24817,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537255",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "顾家家居2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537255.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "顾家家居",
-      "stock_code": "603816",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：顾家家居2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537249",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（杭州）事务所关于顾家家居股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537249.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "顾家家居",
-      "stock_code": "603816",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：国浩律师（杭州）事务所关于顾家家居股份有限公司2026年第二次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25611,69 +24885,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225537243",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537243.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "合肥城建",
-      "stock_code": "002208",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537242",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会会议决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537242.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "合肥城建",
-      "stock_code": "002208",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会会议决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537240",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（深圳）事务所关于深圳齐心集团股份有限公司2026年第一次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537240.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "齐心集团",
-      "stock_code": "002301",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：国浩律师（深圳）事务所关于深圳齐心集团股份有限公司2026年第一次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537239",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -25691,26 +24902,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537235",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市中伦（广州）律师事务所关于公司2026年第一次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537235.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "金禄电子",
-      "stock_code": "301282",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市中伦（广州）律师事务所关于公司2026年第一次临时股东会的法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25765,7 +24956,7 @@
       "title": "上海市通力律师事务所关于光大嘉宝股份有限公司2026年第一次临时股东会的法律意见书",
       "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537203.PDF",
       "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "光大嘉宝",
+      "company": "光<em>大</em>嘉宝",
       "stock_code": "600622",
       "matched_events": [
         "extraordinary_general_meeting",
@@ -25777,26 +24968,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、第一大股东；公告标题：上海市通力律师事务所关于光大嘉宝股份有限公司2026年第一次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537202",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "凯盛科技股份有限公司2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537202.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "凯盛科技",
-      "stock_code": "600552",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：凯盛科技股份有限公司2026年第一次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25822,26 +24993,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225537194",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537194.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "理工能科",
-      "stock_code": "002322",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537192",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -25859,27 +25010,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：日久光电2026年第二次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537191",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537191.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "日久光电",
-      "stock_code": "003015",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第二次临时股东会决议公告"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -25905,46 +25035,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225537159",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "四川东材科技集团股份有限公司2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537159.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "东材科技",
-      "stock_code": "601208",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：四川东材科技集团股份有限公司2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537158",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "宏和科技2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537158.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "宏和科技",
-      "stock_code": "603256",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：宏和科技2026年第三次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537154",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -25962,26 +25052,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：上海市金茂律师事务所关于宏和电子材料科技股份有限公司2026年第三次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537149",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "火炬电子2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537149.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "火炬电子",
-      "stock_code": "603678",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：火炬电子2026年第三次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26024,26 +25094,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537129",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "广汇能源股份有限公司2026年第二次临时股东会会议材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537129.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "广汇能源",
-      "stock_code": "600256",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：广汇能源股份有限公司2026年第二次临时股东会会议材料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26111,126 +25161,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225537113",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "上海曼昆律师事务所关于公司2026年第二次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537113.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "ST龙韵",
-      "stock_code": "603729",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：上海曼昆律师事务所关于公司2026年第二次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537110",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（深圳）事务所关于惠州市德赛西威汽车电子股份有限公司2026年第一次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537110.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "德赛西威",
-      "stock_code": "002920",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：国浩律师（深圳）事务所关于惠州市德赛西威汽车电子股份有限公司2026年第一次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537109",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537109.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "德赛西威",
-      "stock_code": "002920",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537106",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于深圳华控赛格股份有限公司2026年第二次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537106.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "华控赛格",
-      "stock_code": "000068",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于深圳华控赛格股份有限公司2026年第二次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537105",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537105.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "华控赛格",
-      "stock_code": "000068",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537046",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537046.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "国际复材",
-      "stock_code": "301526",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537022",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26271,107 +25201,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：湖南启元律师事务所关于永清环保股份有限公司2026年第二次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537001",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "永清环保股份有限公司2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537001.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "永清环保",
-      "stock_code": "300187",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：永清环保股份有限公司2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536814",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "广东信达律师事务所关于深圳市科达利实业股份有限公司2026年第一次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536814.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "科达利",
-      "stock_code": "002850",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：广东信达律师事务所关于深圳市科达利实业股份有限公司2026年第一次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536813",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536813.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "科达利",
-      "stock_code": "002850",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536778",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "成都燃气2026年第四次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536778.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "成都燃气",
-      "stock_code": "603053",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：成都燃气2026年第四次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536777",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京环球（成都）律师事务所关于成都燃气集团股份有限公司2026年第四次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536777.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "成都燃气",
-      "stock_code": "603053",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京环球（成都）律师事务所关于成都燃气集团股份有限公司2026年第四次临时股东会之法律意见书"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26459,26 +25288,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225536740",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "同庆楼2026年第一次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536740.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "同庆楼",
-      "stock_code": "605108",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：同庆楼2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225536738",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26496,66 +25305,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：三生国健：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536737",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "同庆楼2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536737.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "同庆楼",
-      "stock_code": "605108",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：同庆楼2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536689",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "德林海2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536689.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "德林海",
-      "stock_code": "688069",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：德林海2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536669",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "江阴市恒润重工股份有限公司2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536669.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "恒润股份",
-      "stock_code": "603985",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江阴市恒润重工股份有限公司2026年第二次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26586,66 +25335,6 @@
       "content_status": "extracted"
     },
     {
-      "id": "cninfo:1225536589",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "赛特新材：2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536589.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "赛特新材",
-      "stock_code": "688398",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：赛特新材：2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536548",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536548.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "三友医疗",
-      "stock_code": "688085",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536544",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "家家悦集团股份有限公司2026年第一次临时股东会资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536544.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "家家悦",
-      "stock_code": "603708",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：家家悦集团股份有限公司2026年第一次临时股东会资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225536519",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26664,46 +25353,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、非独立董事候选人、独立董事候选人；公告标题：新华网股份有限公司董事会提名委员会关于公司第五届董事会非独立董事候选人的审查意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536518",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "新华网股份有限公司关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536518.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "新华网",
-      "stock_code": "603888",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：新华网股份有限公司关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536481",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536481.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "灵康药业",
-      "stock_code": "603669",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26729,27 +25378,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225536406",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "格灵深瞳2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536406.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "格灵深瞳",
-      "stock_code": "688207",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：格灵深瞳2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225536244",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26771,46 +25399,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225536219",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "江苏联测机电科技股份有限公司2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536219.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "联测科技",
-      "stock_code": "688113",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江苏联测机电科技股份有限公司2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536049",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536049.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "中 关 村",
-      "stock_code": "000931",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225535862",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26828,27 +25416,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺（王凡）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535859",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "标准股份关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535859.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "ST标准",
-      "stock_code": "600302",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：标准股份关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -26895,27 +25462,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225535801",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535801.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "宇通客车",
-      "stock_code": "600066",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225535799",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -26953,27 +25499,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：潘亚岚：独立董事候选人声明与承诺"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535785",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "咸亨国际：关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535785.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "咸亨国际",
-      "stock_code": "605056",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会",
-        "临时股东大会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会、临时股东大会；公告标题：咸亨国际：关于召开2026年第三次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -27062,26 +25587,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225535763",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "水发派思燃气股份有限公司2026年第二次临时股东会材料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535763.PDF",
-      "published_at": "2026-09-01T00:00:00+08:00",
-      "company": "水发燃气",
-      "stock_code": "603318",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：水发派思燃气股份有限公司2026年第二次临时股东会材料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225535760",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -27123,26 +25628,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538769",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "飞鹿股份：2026年第三次临时股东会法律意见",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538769.PDF",
-      "published_at": "2026-08-31T20:20:10+08:00",
-      "company": "飞鹿股份",
-      "stock_code": "300665",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：飞鹿股份：2026年第三次临时股东会法律意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225538768",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27161,26 +25646,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：飞鹿股份：2026年第三次临时股东会决议公告"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225538768",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538768.PDF",
-      "published_at": "2026-08-31T20:18:26+08:00",
-      "company": "飞鹿股份",
-      "stock_code": "300665",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第三次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225538946",
@@ -27223,46 +25688,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538946",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（上海）事务所关于浙江天振科技股份有限公司2026年第一次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538946.PDF",
-      "published_at": "2026-08-31T20:15:47+08:00",
-      "company": "天振股份",
-      "stock_code": "301356",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：国浩律师（上海）事务所关于浙江天振科技股份有限公司2026年第一次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538945",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "浙江天振科技股份有限公司2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538945.PDF",
-      "published_at": "2026-08-31T20:15:47+08:00",
-      "company": "天振股份",
-      "stock_code": "301356",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：浙江天振科技股份有限公司2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225538942",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27303,46 +25728,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538942",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市中伦（深圳）律师事务所关于广州鹏辉能源科技股份有限公司2026年第三次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538942.PDF",
-      "published_at": "2026-08-31T20:15:41+08:00",
-      "company": "鹏辉能源",
-      "stock_code": "300438",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市中伦（深圳）律师事务所关于广州鹏辉能源科技股份有限公司2026年第三次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538941",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538941.PDF",
-      "published_at": "2026-08-31T20:15:41+08:00",
-      "company": "鹏辉能源",
-      "stock_code": "300438",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第三次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225538006",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27363,26 +25748,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538006",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市天元律师事务所关于德石股份2026年第二次临时股东会法律意见",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538006.PDF",
-      "published_at": "2026-08-31T19:20:11+08:00",
-      "company": "德石股份",
-      "stock_code": "301158",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市天元律师事务所关于德石股份2026年第二次临时股东会法律意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225538005",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27401,26 +25766,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：德石股份：2026年第二次临时股东会决议公告"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225538005",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538005.PDF",
-      "published_at": "2026-08-31T19:20:10+08:00",
-      "company": "德石股份",
-      "stock_code": "301158",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225538402",
@@ -27483,66 +25828,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538402",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "国浩律师（北京）事务所关于福建万辰食品集团股份有限公司2026年第六次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538402.PDF",
-      "published_at": "2026-08-31T19:14:11+08:00",
-      "company": "万辰集团",
-      "stock_code": "300972",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：国浩律师（北京）事务所关于福建万辰食品集团股份有限公司2026年第六次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538401",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第六次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538401.PDF",
-      "published_at": "2026-08-31T19:14:11+08:00",
-      "company": "万辰集团",
-      "stock_code": "300972",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第六次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537672",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "福建纳川管材科技股份有限公司2026年第五次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537672.PDF",
-      "published_at": "2026-08-31T19:14:11+08:00",
-      "company": "*ST纳川",
-      "stock_code": "300198",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：福建纳川管材科技股份有限公司2026年第五次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225537673",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27561,26 +25846,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：*ST纳川：关于福建纳川管材科技股份有限公司2026年第五次临时股东会的法律意见书"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225537673",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于福建纳川管材科技股份有限公司2026年第五次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537673.PDF",
-      "published_at": "2026-08-31T19:12:26+08:00",
-      "company": "*ST纳川",
-      "stock_code": "300198",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于福建纳川管材科技股份有限公司2026年第五次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225537054",
@@ -27603,26 +25868,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225537054",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "江苏世纪同仁律师事务所关于联检（江苏）科技股份有限公司2026年第四次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537054.PDF",
-      "published_at": "2026-08-31T19:08:11+08:00",
-      "company": "联检科技",
-      "stock_code": "301115",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江苏世纪同仁律师事务所关于联检（江苏）科技股份有限公司2026年第四次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225537053",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27641,26 +25886,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：联检科技：2026年第四次临时股东会决议公告"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225537053",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第四次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537053.PDF",
-      "published_at": "2026-08-31T19:06:26+08:00",
-      "company": "联检科技",
-      "stock_code": "301115",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第四次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225536714",
@@ -27683,26 +25908,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225536714",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第四次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225536714.PDF",
-      "published_at": "2026-08-31T19:06:11+08:00",
-      "company": "富满微",
-      "stock_code": "300671",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第四次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225536715",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27721,26 +25926,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：富满微：北京德恒（深圳）律师事务所关于富满微电子集团股份有限公司2026年第四次临时股东会的法律意见"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225536715",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京德恒（深圳）律师事务所关于富满微电子集团股份有限公司2026年第四次临时股东会的法律意见",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225536715.PDF",
-      "published_at": "2026-08-31T19:06:10+08:00",
-      "company": "富满微",
-      "stock_code": "300671",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京德恒（深圳）律师事务所关于富满微电子集团股份有限公司2026年第四次临时股东会的法律意见"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225538191",
@@ -27783,46 +25968,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538191",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "江苏世纪同仁律师事务所关于公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538191.PDF",
-      "published_at": "2026-08-31T18:58:10+08:00",
-      "company": "天孚通信",
-      "stock_code": "300394",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江苏世纪同仁律师事务所关于公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538190",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538190.PDF",
-      "published_at": "2026-08-31T18:58:10+08:00",
-      "company": "天孚通信",
-      "stock_code": "300394",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225538145",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27863,46 +26008,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538145",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京中伦（成都）律师事务所关于华融化学股份有限公司2026年第三次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538145.PDF",
-      "published_at": "2026-08-31T18:42:10+08:00",
-      "company": "华融化学",
-      "stock_code": "301256",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京中伦（成都）律师事务所关于华融化学股份有限公司2026年第三次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225538144",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538144.PDF",
-      "published_at": "2026-08-31T18:42:10+08:00",
-      "company": "华融化学",
-      "stock_code": "301256",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第三次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225537939",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -27921,26 +26026,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：宏景科技：北京市中伦（广州）律师事务所关于宏景科技股份有限公司2026年第五次临时股东会之法律意见书"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225537939",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市中伦（广州）律师事务所关于宏景科技股份有限公司2026年第五次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537939.PDF",
-      "published_at": "2026-08-31T18:22:10+08:00",
-      "company": "宏景科技",
-      "stock_code": "301396",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市中伦（广州）律师事务所关于宏景科技股份有限公司2026年第五次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225547522",
@@ -27963,26 +26048,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225547522",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第五次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225547522.pdf",
-      "published_at": "2026-08-31T18:20:00+08:00",
-      "company": "宏景科技",
-      "stock_code": "301396",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第五次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225537787",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -28003,26 +26068,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225537787",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537787.PDF",
-      "published_at": "2026-08-31T18:14:10+08:00",
-      "company": "盈康生命",
-      "stock_code": "300143",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225537788",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -28041,26 +26086,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：盈康生命：北京市金杜（青岛）律师事务所关于盈康生命科技股份有限公司2026年第一次临时股东会之法律意见书"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225537788",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京市金杜（青岛）律师事务所关于盈康生命科技股份有限公司2026年第一次临时股东会之法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537788.PDF",
-      "published_at": "2026-08-31T18:12:26+08:00",
-      "company": "盈康生命",
-      "stock_code": "300143",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京市金杜（青岛）律师事务所关于盈康生命科技股份有限公司2026年第一次临时股东会之法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225537597",
@@ -28103,46 +26128,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225537597",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "广东信达律师事务所关于深圳秋田微电子股份有限公司2026年第一次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537597.PDF",
-      "published_at": "2026-08-31T17:58:10+08:00",
-      "company": "秋田微",
-      "stock_code": "300939",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：广东信达律师事务所关于深圳秋田微电子股份有限公司2026年第一次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537596",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第一次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537596.PDF",
-      "published_at": "2026-08-31T17:58:10+08:00",
-      "company": "秋田微",
-      "stock_code": "300939",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第一次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "szse:1225536517",
       "source_type": "official",
       "source_name": "深圳证券交易所",
@@ -28181,46 +26166,6 @@
         "深圳证券交易所公告检索命中：临时股东会；公告标题：国联水产：湛江国联水产开发股份有限公司2026年第四次临时股东会决议公告"
       ],
       "content_status": "exchange_search_matched"
-    },
-    {
-      "id": "cninfo:1225536517",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "四川辞鉴（湛江）律师事务所关于湛江国联水产开发股份有限公司2026年第四次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225536517.PDF",
-      "published_at": "2026-08-31T16:42:11+08:00",
-      "company": "国联水产",
-      "stock_code": "300094",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：四川辞鉴（湛江）律师事务所关于湛江国联水产开发股份有限公司2026年第四次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225536516",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "湛江国联水产开发股份有限公司2026年第四次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225536516.PDF",
-      "published_at": "2026-08-31T16:42:11+08:00",
-      "company": "国联水产",
-      "stock_code": "300094",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：湛江国联水产开发股份有限公司2026年第四次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
     },
     {
       "id": "szse:1225533058",
@@ -28263,166 +26208,6 @@
       "content_status": "exchange_search_matched"
     },
     {
-      "id": "cninfo:1225538308",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会通知公告（提供网络投票）",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225538308.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "宏裕包材",
-      "stock_code": "920274",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第一次临时股东会通知公告（提供网络投票）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537948",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537948.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "吉和昌",
-      "stock_code": "920193",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537942",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "湖北忠三律师事务所关于武汉吉和昌新材料股份有限公司2026年第二次临时股东会会议之见证法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537942.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "吉和昌",
-      "stock_code": "920193",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：湖北忠三律师事务所关于武汉吉和昌新材料股份有限公司2026年第二次临时股东会会议之见证法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537688",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会通知公告(提供网络投票)",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537688.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "富恒新材",
-      "stock_code": "920469",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会通知公告(提供网络投票)"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537349",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537349.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "太湖雪",
-      "stock_code": "920262",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537348",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京国枫（南京）律师事务所关于苏州太湖雪丝绸股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537348.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "太湖雪",
-      "stock_code": "920262",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京国枫（南京）律师事务所关于苏州太湖雪丝绸股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537345",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537345.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "迪尔化工",
-      "stock_code": "920304",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537344",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "北京浩天(济南)律师事务所关于山东华阳迪尔化工股份有限公司2026年第二次临时股东会的法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537344.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "迪尔化工",
-      "stock_code": "920304",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：北京浩天(济南)律师事务所关于山东华阳迪尔化工股份有限公司2026年第二次临时股东会的法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225537338",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -28461,46 +26246,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺（黄朝晖）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225537069",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会通知公告（提供网络投票）",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225537069.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "科创新材",
-      "stock_code": "920580",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会通知公告（提供网络投票）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535283",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "迈威生物2026年第四次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535283.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "迈威生物",
-      "stock_code": "688062",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：迈威生物2026年第四次临时股东会会议资料"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -28568,46 +26313,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225535232",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535232.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "洁特生物",
-      "stock_code": "688026",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535132",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "雪龙集团股份有限公司关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535132.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "雪龙集团",
-      "stock_code": "603949",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：雪龙集团股份有限公司关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225535103",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -28625,146 +26330,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺-沈福鑫"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535096",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535096.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "国联股份",
-      "stock_code": "603613",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535088",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "重庆水务2026年第四次临时股东会法律意见书",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535088.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "重庆水务",
-      "stock_code": "601158",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：重庆水务2026年第四次临时股东会法律意见书"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535087",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535087.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "昱能科技",
-      "stock_code": "688348",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225535062",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "仙鹤股份有限公司关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535062.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "仙鹤股份",
-      "stock_code": "603733",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：仙鹤股份有限公司关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534943",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "旗滨集团关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534943.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "旗滨集团",
-      "stock_code": "601636",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：旗滨集团关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534941",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "中材节能股份有限公司关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534941.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "中材节能",
-      "stock_code": "603126",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：中材节能股份有限公司关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534938",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "江西宏柏新材料股份有限公司关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534938.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "宏柏新材",
-      "stock_code": "605366",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：江西宏柏新材料股份有限公司关于召开2026年第一次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -28789,46 +26354,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225534867",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "三一重工股份有限公司关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534867.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "三一重工",
-      "stock_code": "600031",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：三一重工股份有限公司关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534818",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "电投水电关于召开2026年第二次（临时）股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534818.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "电投水电",
-      "stock_code": "600292",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：电投水电关于召开2026年第二次（临时）股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225534816",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -28845,46 +26370,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人；公告标题：上海新炬网络信息技术股份有限公司第三届董事会提名委员会关于第四届董事会董事候选人任职资格的审查意见"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534795",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "红塔证券股份有限公司关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534795.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "红塔证券",
-      "stock_code": "601236",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：红塔证券股份有限公司关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534781",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "华扬联众数字技术股份有限公司关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534781.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "ST华扬",
-      "stock_code": "603825",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：华扬联众数字技术股份有限公司关于召开2026年第四次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -28910,26 +26395,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225534735",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "上海新炬网络信息技术股份有限公司关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534735.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "新炬网络",
-      "stock_code": "605398",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：上海新炬网络信息技术股份有限公司关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225534703",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -28947,86 +26412,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：上海新炬网络信息技术股份有限公司独立董事候选人声明与承诺（连晏杰）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534692",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "德龙激光关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534692.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "德龙激光",
-      "stock_code": "688170",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：德龙激光关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534674",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534674.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "广钢气体",
-      "stock_code": "688548",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534668",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "新疆众和股份有限公司2026年第一次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534668.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "新疆众和",
-      "stock_code": "600888",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：新疆众和股份有限公司2026年第一次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534659",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "中科微至关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534659.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "中科微至",
-      "stock_code": "688211",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：中科微至关于召开2026年第二次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -29052,46 +26437,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225534607",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "迈威生物关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534607.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "迈威生物",
-      "stock_code": "688062",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：迈威生物关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534579",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534579.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "昱能科技",
-      "stock_code": "688348",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225534559",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -29109,146 +26454,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺（兰苑培）"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534544",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "三一重工股份有限公司2026年第二次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534544.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "三一重工",
-      "stock_code": "600031",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：三一重工股份有限公司2026年第二次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534445",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "天津渤海化学股份有限公司关于召开2026年第四次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534445.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "渤海化学",
-      "stock_code": "600800",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：天津渤海化学股份有限公司关于召开2026年第四次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534420",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "禾丰股份关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534420.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "禾丰股份",
-      "stock_code": "603609",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：禾丰股份关于召开2026年第一次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534412",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "2026年第三次临时股东会会议资料",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534412.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "国联股份",
-      "stock_code": "603613",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：2026年第三次临时股东会会议资料"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534406",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "华丰动力股份有限公司关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534406.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "华丰股份",
-      "stock_code": "605100",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：华丰动力股份有限公司关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534389",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "海目星：关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534389.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "海目星",
-      "stock_code": "688559",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：海目星：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534386",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第一次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534386.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "清源股份",
-      "stock_code": "603628",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第一次临时股东会的通知"
       ],
       "content_status": "fulltext_search_matched"
     },
@@ -29274,86 +26479,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225534315",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第五次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534315.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "强一股份",
-      "stock_code": "688809",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第五次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534311",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "华发股份关于召开2026年第八次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534311.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "华发股份",
-      "stock_code": "600325",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：华发股份关于召开2026年第八次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534264",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534264.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "富创精密",
-      "stock_code": "688409",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534259",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "辽宁成大股份有限公司关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534259.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "辽宁成大",
-      "stock_code": "600739",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：辽宁成大股份有限公司关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225534240",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -29375,46 +26500,6 @@
       "content_status": "fulltext_search_matched"
     },
     {
-      "id": "cninfo:1225534237",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "红塔证券股份有限公司2026年第三次临时股东会会议文件",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534237.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "红塔证券",
-      "stock_code": "601236",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：红塔证券股份有限公司2026年第三次临时股东会会议文件"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534224",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "重庆水务2026年第四次临时股东会决议公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534224.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "重庆水务",
-      "stock_code": "601158",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：重庆水务2026年第四次临时股东会决议公告"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
       "id": "cninfo:1225534223",
       "source_type": "official",
       "source_name": "巨潮资讯",
@@ -29432,86 +26517,6 @@
       ],
       "evidence_snippets": [
         "巨潮全文检索命中：董事候选人、独立董事候选人；公告标题：独立董事候选人声明与承诺-朱华"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534204",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "*ST起步：关于召开2026年第二次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534204.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "*ST起步",
-      "stock_code": "603557",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：*ST起步：关于召开2026年第二次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225534177",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "永杉锂业关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534177.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "永杉锂业",
-      "stock_code": "603399",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：永杉锂业关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225533058",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的通知",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225533058.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "安克创新",
-      "stock_code": "300866",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的通知"
-      ],
-      "content_status": "fulltext_search_matched"
-    },
-    {
-      "id": "cninfo:1225524181",
-      "source_type": "official",
-      "source_name": "巨潮资讯",
-      "title": "关于召开2026年第三次临时股东会的提示性公告",
-      "url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225524181.PDF",
-      "published_at": "2026-08-31T00:00:00+08:00",
-      "company": "英 力 特",
-      "stock_code": "000635",
-      "matched_events": [
-        "extraordinary_general_meeting"
-      ],
-      "matched_keywords": [
-        "临时股东会"
-      ],
-      "evidence_snippets": [
-        "巨潮全文检索命中：临时股东会；公告标题：关于召开2026年第三次临时股东会的提示性公告"
       ],
       "content_status": "fulltext_search_matched"
     }
