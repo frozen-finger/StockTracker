@@ -24,7 +24,7 @@ permissions:
 
 concurrency:
   group: weekly-a-share-collector
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   collect:
