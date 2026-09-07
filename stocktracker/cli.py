@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 from stocktracker.http import HttpClient
 from stocktracker.pipeline import run_pipeline, write_report
 from stocktracker.sources.bing_news import BingNewsCollector
-from stocktracker.sources.cninfo import CninfoCollector
+from stocktracker.sources.exchanges import ExchangeFallbackCollector, FallbackAwareCninfoCollector
 
 
 def parse_args() -> argparse.Namespace:
@@ -29,7 +29,8 @@ def main() -> int:
     start = end - timedelta(days=args.days - 1)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     http = HttpClient(timeout=args.timeout)
-    collectors = [CninfoCollector(http), BingNewsCollector(http)]
+    cninfo = FallbackAwareCninfoCollector(http)
+    collectors = [cninfo, ExchangeFallbackCollector(http, cninfo), BingNewsCollector(http)]
     report = run_pipeline(collectors, start, end)
     latest, snapshot = write_report(report, args.output_dir)
     logging.info("Wrote %s and %s (%s documents, status=%s)", latest, snapshot, report["stats"]["document_count"], report["status"])
